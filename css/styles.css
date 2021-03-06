@@ -1,0 +1,107 @@
+/* --- Font imports --- */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:400,700");
+
+/* --- Component imports --- */
+@import url("components/container.css");
+
+
+/* --- Fonts & colors --- */
+
+body {
+  background-color: rgb(245,245,245);
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  margin: 0;
+}
+h1, h2, h3 {
+  font-family: "Poppins", "sans-serif";
+}
+
+.navbar {
+  margin-left: 16px;
+}
+
+.masonry { /* Masonry container */
+  column-count: 4;
+  column-gap: 8px;
+  padding: 8px;
+}
+
+.item {
+  background-color: #eee;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item >img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.item h3 {
+  margin: 0px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.item-flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 8px;
+}
+
+.avatar-card {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-card img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+}
+
+.avatar-card p {
+  font-size: 8px;
+  margin-left: 4px;
+}
+
+.item p {
+  font-size: 8px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Masonry on large screens */
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+/* Masonry on medium-sized screens */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+@media only screen and (max-width: 767px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
